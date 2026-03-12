@@ -9,3 +9,12 @@ services:
         command: ["node", "app.js"]
         ports:
             - "3000:3000"
+
+    mongo:
+        image: mongo:4.4
+        container_name: mongo4
+        volumes:
+        - mongo-data:/data/db
+
+volumes:
+    mongo-data:
