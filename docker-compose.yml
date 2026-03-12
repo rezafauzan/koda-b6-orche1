@@ -1,0 +1,11 @@
+# mongodb-4
+# nodejs-11
+services:
+    express: 
+        image: node:11-alpine
+        working_dir: /home/node/app
+        volumes:
+            - ./:/home/node/app
+        command: ["node", "app.js"]
+        ports:
+            - "3000:3000"
